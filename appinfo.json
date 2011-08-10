@@ -1,0 +1,9 @@
+{
+	"id": "org.zo0o0ot.jcard",
+	"version": "1.0.0",
+	"vendor": "zo0o0ot",
+	"type": "web",
+	"main": "index.html",
+	"title": "JCard",
+	"icon": "icon.png"
+}
