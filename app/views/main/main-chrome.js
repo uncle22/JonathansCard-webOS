@@ -43,54 +43,52 @@ opus.Gizmo({
 							r: 1,
 							w: 301,
 							t: 0,
-							h: 149
+							h: 124
 						},
 						{
-							name: "panel1",
-							layoutKind: "hbox",
-							dropTarget: true,
-							type: "Palm.Mojo.Panel",
+							name: "bummer",
+							ontap: "bummerTap",
+							label: "The social experiment is over.  Jonathan's card has been deactivated as of Aug. 12, 2011.",
+							type: "Palm.Mojo.Label",
 							l: 0,
-							w: 303,
-							t: 205,
-							h: 59,
-							controls: [
-								{
-									name: "lblBalance",
-									label: "Balance:",
-									type: "Palm.Mojo.Label",
-									l: 0,
-									w: 81,
-									t: 0,
-									styles: {
-										oneLine: true,
-										textColor: "#ffffff"
-									}
-								},
-								{
-									name: "checkTwitter",
-									ontap: "checkTwitterTap",
-									disabled: undefined,
-									label: "Check Twitter",
-									type: "Palm.Mojo.Button",
-									l: 81,
-									w: 220,
-									t: 0
-								},
-								{
-									name: "updatedBalance",
-									showing: false,
-									label: "Tap card to update!",
-									type: "Palm.Mojo.Label",
-									l: 0,
-									t: 0,
-									styles: {
-										textColor: "#1cd100",
-										textAlign: "center",
-										oneLine: true
-									}
-								}
-							]
+							t: 124,
+							h: 87,
+							hAlign: "center",
+							styles: {
+								underline: true,
+								textColor: "#00FF00",
+								textAlign: "center"
+							}
+						},
+						{
+							name: "caffePagato",
+							ontap: "caffePagatoTap",
+							disabled: undefined,
+							label: "Learn about Caffe pagato",
+							type: "Palm.Mojo.Button",
+							l: 0,
+							t: 229
+						},
+						{
+							name: "fraud",
+							ontap: "fraudTap",
+							disabled: undefined,
+							label: "Jonathan's Card Fraud",
+							type: "Palm.Mojo.Button",
+							l: 0,
+							t: 297,
+							styles: {
+								opacity: 1
+							}
+						},
+						{
+							name: "twitter",
+							ontap: "twitterTap",
+							disabled: undefined,
+							label: "Jonathan's Card on Twitter",
+							type: "Palm.Mojo.Button",
+							l: 0,
+							t: 357
 						},
 						{
 							name: "panel2",
@@ -127,38 +125,16 @@ opus.Gizmo({
 									}
 								}
 							]
-						},
-						{
-							name: "lblgiveCoffee",
-							ontap: "giveCoffeeTap",
-							label: "Like the app?  Give some coffee!",
-							type: "Palm.Mojo.Label",
-							l: 0,
-							t: 325,
-							h: 33,
-							styles: {
-								textColor: "#1cd100",
-								textAlign: "center"
-							}
-						},
-						{
-							name: "btnGiveCoffee",
-							ontap: "btnGiveCoffeeTap",
-							disabled: undefined,
-							label: "Give Coffee!",
-							type: "Palm.Mojo.Button",
-							l: 0,
-							t: 374
 						}
 					]
 				},
 				{
-					name: "row1",
+					name: "row2",
 					dropTarget: true,
 					rowType: "last",
 					type: "Palm.Mojo.Row",
 					l: 0,
-					t: 409,
+					t: 408,
 					h: "auto"
 				}
 			]
