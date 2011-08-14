@@ -7,46 +7,20 @@ MainAssistant.prototype = {
 	cleanup: function() {
 		Ares.cleanupSceneAssistant(this);
 	},
-	giveCoffeeTap: function(inSender, event) {
-		window.location = "http://jonathanstark.com/card/#give-a-coffee";
-	},
 	jcardImageTap: function(inSender, event) {
-		//get "amount_formatted" in JSON from http://jonathanstark.com/card/api/latest
-		//and assign it to the "updatedBalance" label.
-		// I need to use Ajax.Request here.
-		/*
-		Mojo.Log.info("Requesting latest card balance from Jonathan's Card");
-		var balanceRequest = new Ajax.Request("http://jonathanstark.com/card/api/latest", {
-			method: 'get',
-			evalJSON: 'false',
-			onSuccess: this.balanceRequestSuccess.bind(this),
-			onFailure: this.balanceRequestFailure.bind(this)
-		});
-		*/
-		//After I can get the balance working, also get "created_at", parse it, 
-		//and reformat it in the local time prefs.
+		//The card has been disabled.  Link to the page that explains this.
+		window.location = "http://jonathanstark.com/card/";
 	},
-	/*
-	//Test
-	balanceRequestSuccess: function(balanceResponse) {
-		//Chrome says that the page is returning X-JSON.
-		balanceJSON = balanceResponse.headerJSON;
-		var balanceAmtFromWeb = balanceJSON.getElementsByTagName("amount_formatted");
-		Mojo.Log.info(balanceAmtFromWeb[0]);
-		//The label I wish to update is named "updatedBalance" in main-chrome.js
-		updatedBalance.label = balanceAmtFromWeb[0];
+	bummerTap: function(inSender, event) {
+		window.location = "http://jonathanstark.com/card/";
 	},
-	balanceRequestFailure: function(balanceResponse) {
-		Mojo.Log.info("Failed to get the card balance:  " + balanceResponse.getAllHeaders());
-		Mojo.Log.info(balanceResponse.responseText);
-		Mojo.Controller.errorDialog("Failed to load the latest card balance.");
+	caffePagatoTap: function(inSender, event) {
+		window.location = "https://www.facebook.com/note.php?note_id=410014862860";
 	},
-	//End test
-	*/
-	btnGiveCoffeeTap: function(inSender, event) {
-		window.location = "http://jonathanstark.com/card/#give-a-coffee";
+	fraudTap: function(inSender, event) {
+		window.location = "http://sam.odio.com/2011/08/12/i-took-625-jonathans-card/";
 	},
-	checkTwitterTap: function(inSender, event) {
+	twitterTap: function(inSender, event) {
 		window.location = "http://twitter.com/#!/jonathanscard";
 	}
 };
